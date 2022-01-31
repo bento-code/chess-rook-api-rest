@@ -6,6 +6,7 @@ const usersController=require('../controllers/users.controller')
 
 router.get('/users', usersController.getUsers);
 router.get('/user', usersController.getUser);
+router.put('/user', usersController.putUser);
 router.post('/signup', usersController.signUp);
 router.post('/signin', usersController.signIn);
 

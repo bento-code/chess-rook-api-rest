@@ -6,6 +6,7 @@ const pool=require('./database');
 
 const errorHandler=require('./errors/errorHandler')
 const usersRoutes=require('./routes/users.routes');
+const authRoutes=require('./routes/auth.routes');
 
 const activeUsersId=[];
 const challenges=[];
@@ -27,6 +28,7 @@ app.use((req, res, next) => {
     next();
 })
 
+app.use(authRoutes);
 app.use(usersRoutes);
 app.use((req, res, next)=>
 {
